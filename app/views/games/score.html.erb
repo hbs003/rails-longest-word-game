@@ -1,0 +1,12 @@
+<h1>Games#score</h1>
+<p>Result</p>
+<% if @value != true %>
+  <%="Sorry! The word #{@word} can't be built out of the original grid"%>
+<% elsif @exist != true %>
+  <%= "Sorry. The word #{@word} is valid according to the grid, but is not a valid English word" %>
+<% else %>
+  <%= "Congratulations. The word #{@word} is valid according to the grid and is an English word. Your score is #{@score}." %>
+<% end %>
+
+<hr>
+<%= link_to "Play again", new_path %>
